@@ -33,7 +33,6 @@ import ru.practicum.eventservice.events.model.Event;
 @Getter
 @Setter
 @Entity
-@ToString
 @Table(name = "compilations")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Compilation {

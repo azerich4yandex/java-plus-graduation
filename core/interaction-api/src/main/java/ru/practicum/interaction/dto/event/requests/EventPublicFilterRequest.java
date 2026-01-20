@@ -12,7 +12,7 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 /**
  * Filter criteria for public event searches.
- *
+ * <p></p>
  * Fields:
  * - `text` – Text to search in event title and description (case-insensitive). Optional.
  * - `categories` – List of category IDs to filter by. Empty list means no filtering.

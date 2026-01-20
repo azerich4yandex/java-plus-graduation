@@ -8,7 +8,7 @@ import ru.practicum.interaction.dto.user.UserShortDto;
 
 /**
  * DTO representing subscription data exchanged via API.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the subscription.
  * - `subscriber` – Simplified DTO of the subscribing user.

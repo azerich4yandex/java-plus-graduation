@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 /**
  * DTO representing an event.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the event.
  * - `eventDate` – Date and time when the event occurs.

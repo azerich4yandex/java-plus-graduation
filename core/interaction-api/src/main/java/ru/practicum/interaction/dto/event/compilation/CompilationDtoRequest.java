@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO for creating a new compilation.
- *
+ * <p></p>
  * Fields:
  * - `events` – List of event IDs to include in the compilation. Defaults to empty.
  * - `pinned` – Specifies if the compilation is pinned.
@@ -18,7 +18,6 @@ import lombok.experimental.FieldDefaults;
  */
 @Getter
 @Setter
-@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CompilationDtoRequest {
     Set<Long> events;

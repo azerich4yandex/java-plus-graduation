@@ -13,7 +13,7 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 /**
  * DTO for a new event creation.
- *
+ * <p></p>
  * Fields:
  * - `annotation` – Short event description. Must not be blank.
  *                  Length: 20–2000 characters.

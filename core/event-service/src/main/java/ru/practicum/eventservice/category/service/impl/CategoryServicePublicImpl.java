@@ -24,7 +24,7 @@ public class CategoryServicePublicImpl implements CategoryServicePublic {
     @Override
     @Transactional(readOnly = true)
     public CategoryDto getByIDCategoryPublic(Long catId) {
-        CategoryDto categoryDto = categoryMapper.toCategoryDto(findCategoryByIdOrThrow(catId));
+        CategoryDto categoryDto = categoryMapper.toCategoryDto(findCategoryByIdOrElseThrow(catId));
         log.info("Получение публичного доступа категории с id {}", catId);
         return categoryDto;
     }
@@ -36,7 +36,7 @@ public class CategoryServicePublicImpl implements CategoryServicePublic {
         return categoryMapper.toCategoryDto(categoryRepository.findAll(PageRequest.of(from / size, size)).toList());
     }
 
-    private Category findCategoryByIdOrThrow(Long catId) {
+    private Category findCategoryByIdOrElseThrow(Long catId) {
         Optional<Category> category = categoryRepository.findById(catId);
         if (category.isPresent()) {
             return category.get();

@@ -10,7 +10,7 @@ import ru.practicum.interaction.dto.request.enums.RequestStatus;
 
 /**
  * DTO for updating the status of multiple participation requests.
- *
+ * <p></p>
  * Fields:
  * - `requestIds` – List of request IDs to be updated.
  * - `status` – New status to apply to the requests.

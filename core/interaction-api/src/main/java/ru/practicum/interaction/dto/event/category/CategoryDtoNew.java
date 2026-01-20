@@ -12,7 +12,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO used for creating a new category.
- *
+ * <p></p>
  * Fields:
  * - `name` – Name of the category. Must not be blank.
  *            Length constraints: minimum 1 character, maximum 50 characters.

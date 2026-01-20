@@ -10,7 +10,7 @@ import ru.practicum.interaction.dto.event.EventShortDto;
 
 /**
  * DTO representing a compilation with metadata and event details.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the compilation.
  * - `events` – List of event summaries included in the compilation.
@@ -19,7 +19,6 @@ import ru.practicum.interaction.dto.event.EventShortDto;
  */
 @Getter
 @Setter
-@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CompilationDtoResponse {
     Long id;

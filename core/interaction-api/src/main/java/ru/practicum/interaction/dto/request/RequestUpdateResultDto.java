@@ -9,7 +9,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO representing the result of updating participation requests.
- *
+ * <p></p>
  * Fields:
  * - `confirmedRequests` – List of requests successfully confirmed.
  * - `rejectedRequests` – List of requests that were rejected.

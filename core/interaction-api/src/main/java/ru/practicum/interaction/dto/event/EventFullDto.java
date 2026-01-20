@@ -13,7 +13,7 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 /**
  * DTO representing full details of an event.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the event.
  * - `annotation` – Short description of the event.

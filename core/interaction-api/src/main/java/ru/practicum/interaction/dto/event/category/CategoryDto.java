@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * Data Transfer Object (DTO) representing a category.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the category.
  * - `name` – Name of the category.

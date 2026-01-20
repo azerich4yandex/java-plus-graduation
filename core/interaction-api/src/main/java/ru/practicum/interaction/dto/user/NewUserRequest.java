@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO representing a request to create a new user.
- *
+ * <p></p>
  * Fields:
  * - `name` – User's name. Must not be blank.
  *            Validation: length between 2 and 250 characters.

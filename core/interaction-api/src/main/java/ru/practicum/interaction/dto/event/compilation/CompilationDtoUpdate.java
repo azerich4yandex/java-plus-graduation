@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO for updating an existing compilation.
- *
+ * <p></p>
  * Fields:
  * - `events` – Updated list of event IDs for the compilation. Defaults to empty.
  * - `pinned` – Updated pinned status of the compilation.
@@ -18,7 +18,6 @@ import lombok.experimental.FieldDefaults;
  */
 @Getter
 @Setter
-@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CompilationDtoUpdate {
     Set<Long> events;

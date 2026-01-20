@@ -17,7 +17,7 @@ import ru.practicum.interaction.dto.request.enums.RequestStatus;
 
 /**
  * Entity representing a participation request for an event.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the request. Auto-generated.
  * - `created` – Timestamp when the request was submitted.

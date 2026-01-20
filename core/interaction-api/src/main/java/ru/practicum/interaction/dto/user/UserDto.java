@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO representing full user data.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the user.
  * - `name` – Full name of the user.

@@ -15,7 +15,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * Entity representing a subscription relationship between users.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the subscription. Auto-generated.
  * - `subscriberId` – ID of the user who initiated the subscription..

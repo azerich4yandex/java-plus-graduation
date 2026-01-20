@@ -1,10 +1,9 @@
 package ru.practicum.interaction.util;
 
-@SuppressWarnings("squid:S1075")
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class ConstantsUtil {
-    private ConstantsUtil() {
-        throw new AssertionError("Utility class should not be instantiated");
-    }
 
     public static final String ADMIN = "/admin";
     public static final String CATEGORIES = "/categories";
@@ -30,12 +29,14 @@ public class ConstantsUtil {
     public static final String ADMIN_USERS = ADMIN + USERS; // Пользователи для админа
 
     public static final String PATH_TO_USER = USERS + USER_ID; // Базовый путь до конкретного пользователя
-    public static final String PATH_TO_SUBSCRIPTION = SUBSCRIPTIONS + SUBSCRIBED_TO_ID; // Путь для подписки или отписки
-    public static final String PRIVATE_EVENTS = PATH_TO_USER + EVENTS; // Базовый путь для приватных событий пользователя
-    public static final String PRIVATE_EVENT_REQUESTS = PRIVATE_EVENTS + EVENT_ID + REQUESTS; // Запросы пользователя на участие в событии
+    public static final String PRIVATE_EVENTS =
+            PATH_TO_USER + EVENTS; // Базовый путь для приватных событий пользователя
+    public static final String PRIVATE_EVENT_REQUESTS =
+            PRIVATE_EVENTS + EVENT_ID + REQUESTS; // Запросы пользователя на участие в событии
     public static final String PRIVATE_REQUESTS = PATH_TO_USER + REQUESTS; // Все запросы пользователя
-    public static final String PRIVATE_REQUEST_CANCEL = PRIVATE_REQUESTS + REQUEST_ID + CANCEL; // Отмена конкретного запроса
-
+    public static final String PRIVATE_REQUEST_CANCEL =
+            PRIVATE_REQUESTS + REQUEST_ID + CANCEL; // Отмена конкретного запроса
+    public static final String PATH_TO_SUBSCRIPTION = SUBSCRIPTIONS + SUBSCRIBED_TO_ID; // Путь для подписки или отписки
     public static final String USER_MAPPED = "/mapped";
     public static final String SHORT_DTO_PATH = "/short";
     public static final String USER_SHORT_DTO = USER_ID + SHORT_DTO_PATH;

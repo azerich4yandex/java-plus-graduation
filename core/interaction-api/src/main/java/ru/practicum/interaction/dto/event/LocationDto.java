@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO representing geographical coordinates.
- *
+ * <p></p>
  * Fields:
  * - `lat` – Latitude coordinate (valid range: -90 to 90).
  * - `lon` – Longitude coordinate (valid range: -180 to 180).

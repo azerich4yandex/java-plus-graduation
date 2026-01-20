@@ -15,7 +15,7 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 /**
  * Base request DTO for updating event properties.
- *
+ * <p></p>
  * Fields:
  * - `annotation` – Brief event summary (20-2000 characters).
  * - `category` – ID of the event category. Null preserves current value.
@@ -29,7 +29,6 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
  */
 @Getter
 @Setter
-@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UpdateEventRequest {
     @Size(min = 20, max = 2000)

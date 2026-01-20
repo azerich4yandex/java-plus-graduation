@@ -17,7 +17,6 @@ import lombok.experimental.FieldDefaults;
  */
 @Getter
 @Setter
-@ToString
 @Embeddable
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Location {

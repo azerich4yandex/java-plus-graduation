@@ -10,7 +10,7 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 /**
  * DTO representing a participation request.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the request.
  * - `created` – Timestamp of request creation.

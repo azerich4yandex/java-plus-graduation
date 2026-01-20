@@ -12,7 +12,7 @@ import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 /**
  * Filter criteria for admin event searches.
- *
+ * <p></p>
  * Fields:
  * - `userIds` – List of user IDs to filter by. Optional.
  * - `states` – List of event states to filter by (e.g., PENDING, PUBLISHED). Optional.

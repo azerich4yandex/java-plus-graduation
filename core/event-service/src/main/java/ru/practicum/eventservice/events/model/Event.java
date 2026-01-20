@@ -47,7 +47,6 @@ import ru.practicum.interaction.dto.event.enums.EventState;
 @Entity
 @Getter
 @Setter
-@ToString
 @Table(name = "events")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Event {

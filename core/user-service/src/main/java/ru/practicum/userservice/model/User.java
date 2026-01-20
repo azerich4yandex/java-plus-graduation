@@ -13,7 +13,7 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * Entity representing a user in the system.
- *
+ * <p></p>
  * Fields:
  * - `id` – Unique identifier of the user. Auto-generated.
  * - `name` – Full name of the user. Cannot be null.

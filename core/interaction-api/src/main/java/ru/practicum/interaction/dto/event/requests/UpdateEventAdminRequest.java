@@ -11,7 +11,7 @@ import ru.practicum.interaction.dto.event.validators.EventDateInOneHour;
 
 /**
  * Admin request for updating event details with administrative controls.
- *
+ * <p></p>
  * Fields:
  * - `stateAction` – Administrative action to change event state:
  *   PUBLISH_EVENT, REJECT_EVENT (required for state transitions).
@@ -21,7 +21,6 @@ import ru.practicum.interaction.dto.event.validators.EventDateInOneHour;
  */
 @Getter
 @Setter
-@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UpdateEventAdminRequest extends UpdateEventRequest {
     UpdateAdminStateAction stateAction;
