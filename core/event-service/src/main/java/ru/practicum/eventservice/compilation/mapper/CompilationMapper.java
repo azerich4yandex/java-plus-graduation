@@ -1,16 +1,17 @@
 package ru.practicum.eventservice.compilation.mapper;
 
-import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 import ru.practicum.eventservice.compilation.model.Compilation;
-import ru.practicum.eventservice.events.mapper.EventMapper;
-import ru.practicum.eventservice.events.model.Event;
 import ru.practicum.interaction.dto.event.compilation.CompilationDtoRequest;
 import ru.practicum.interaction.dto.event.compilation.CompilationDtoResponse;
 import ru.practicum.interaction.dto.event.compilation.CompilationDtoUpdate;
+import ru.practicum.eventservice.events.mapper.EventMapper;
+import ru.practicum.eventservice.events.model.Event;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {EventMapper.class},
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
@@ -22,7 +23,7 @@ public interface CompilationMapper {
     @Mapping(target = "title", source = "compilationDto.title")
     @Mapping(target = "pinned", source = "compilationDto.pinned")
     @Mapping(target = "events", source = "events")
-    Compilation toUpdateCompilation(
+    Compilation toUpdatedCompilation(
             @MappingTarget Compilation compilation,
             CompilationDtoUpdate compilationDto,
             List<Event> events

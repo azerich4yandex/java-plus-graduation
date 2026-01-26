@@ -1,19 +1,20 @@
 package ru.practicum.interaction.dto.event;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import java.time.LocalDateTime;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 import ru.practicum.interaction.dto.event.category.CategoryDto;
 import ru.practicum.interaction.dto.user.UserShortDto;
 
+import java.time.LocalDateTime;
+
 import static ru.practicum.interaction.util.ConstantsUtil.DATE_TIME_PATTERN;
 
 
 /**
  * DTO representing brief information about an event.
- * <p></p>
+ *<hr />
  * Fields:
  * - `id` – Unique identifier of the event.
  * - `annotation` – Short description of the event.
@@ -37,5 +38,5 @@ public class EventShortDto implements EventDto {
     CategoryDto category;
     UserShortDto initiator;
     Long confirmedRequests;
-    Long views;
+    double rating;
 }

@@ -2,11 +2,6 @@ package ru.practicum.requestservice.service;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import feign.FeignException;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +10,6 @@ import ru.practicum.interaction.dto.event.enums.EventState;
 import ru.practicum.interaction.dto.request.RequestDto;
 import ru.practicum.interaction.dto.request.RequestUpdateDto;
 import ru.practicum.interaction.dto.request.RequestUpdateResultDto;
-import ru.practicum.interaction.dto.request.enums.RequestStatus;
 import ru.practicum.interaction.dto.user.UserShortDto;
 import ru.practicum.interaction.exception.ConflictException;
 import ru.practicum.interaction.exception.ForbiddenOperationException;
@@ -23,9 +17,16 @@ import ru.practicum.interaction.exception.NotFoundException;
 import ru.practicum.interaction.feign.EventFeignClient;
 import ru.practicum.interaction.feign.UserFeignClient;
 import ru.practicum.requestservice.mapper.RequestMapper;
-import ru.practicum.requestservice.model.QRequest;
 import ru.practicum.requestservice.model.Request;
+import ru.practicum.requestservice.model.QRequest;
+import ru.practicum.interaction.dto.request.enums.RequestStatus;
 import ru.practicum.requestservice.repository.RequestRepository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -240,5 +241,10 @@ public class RequestServiceImpl implements RequestService {
         if (!userId.equals(event.getInitiator().getId())) {
             throw new ForbiddenOperationException("Доступ только для инициатора события");
         }
+    }
+
+    @Override
+    public boolean isRequestExist(Long userId, Long eventId) {
+        return requestRepository.existsByRequesterIdAndEventId(userId, eventId);
     }
 }

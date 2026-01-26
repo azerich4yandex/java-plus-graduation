@@ -13,6 +13,7 @@ public class ConstantsUtil {
     public static final String REQUESTS = "/requests";
     public static final String SUBSCRIPTIONS = "/subscriptions";
     public static final String SUBSCRIBERS = "/subscribers";
+    public static final String RECOMMENDATIONS = "/recommendations";
 
     public static final String CANCEL = "/cancel";
 
@@ -29,18 +30,15 @@ public class ConstantsUtil {
     public static final String ADMIN_USERS = ADMIN + USERS; // Пользователи для админа
 
     public static final String PATH_TO_USER = USERS + USER_ID; // Базовый путь до конкретного пользователя
-    public static final String PRIVATE_EVENTS =
-            PATH_TO_USER + EVENTS; // Базовый путь для приватных событий пользователя
-    public static final String PRIVATE_EVENT_REQUESTS =
-            PRIVATE_EVENTS + EVENT_ID + REQUESTS; // Запросы пользователя на участие в событии
-    public static final String PRIVATE_REQUESTS = PATH_TO_USER + REQUESTS; // Все запросы пользователя
-    public static final String PRIVATE_REQUEST_CANCEL =
-            PRIVATE_REQUESTS + REQUEST_ID + CANCEL; // Отмена конкретного запроса
     public static final String PATH_TO_SUBSCRIPTION = SUBSCRIPTIONS + SUBSCRIBED_TO_ID; // Путь для подписки или отписки
+    public static final String PRIVATE_EVENTS = PATH_TO_USER + EVENTS; // Базовый путь для приватных событий пользователя
+    public static final String PRIVATE_EVENT_REQUESTS = PRIVATE_EVENTS + EVENT_ID + REQUESTS; // Запросы пользователя на участие в событии
+    public static final String PRIVATE_REQUESTS = PATH_TO_USER + REQUESTS; // Все запросы пользователя
+    public static final String PRIVATE_REQUEST_CANCEL = PRIVATE_REQUESTS + REQUEST_ID + CANCEL; // Отмена конкретного запроса
+
     public static final String USER_MAPPED = "/mapped";
     public static final String SHORT_DTO_PATH = "/short";
     public static final String USER_SHORT_DTO = USER_ID + SHORT_DTO_PATH;
-
 
     public static final String REQUEST_CONFIRMED = REQUESTS + "/confirmed";
     public static final String COUNT = "/count";
@@ -49,6 +47,10 @@ public class ConstantsUtil {
 
     public static final String EVENTS_FEIGN = "/events/feign";
     public static final String EVENT_ID_USER_ID = EVENT_ID + USER_ID;
+    public static final String EVENT_LIKE = EVENT_ID  + "/like";
+    public static final String CHECK_REQUEST_EXIST =  "/exist" + EVENT_ID_USER_ID;
 
     public static final String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
+
+    public static final String LOG_FORMAT = "{}: {}";
 }

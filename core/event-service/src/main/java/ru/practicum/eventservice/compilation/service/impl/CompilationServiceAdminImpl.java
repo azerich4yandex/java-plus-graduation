@@ -1,13 +1,5 @@
 package ru.practicum.eventservice.compilation.service.impl;
 
-import jakarta.validation.ValidationException;
-import java.util.List;
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.eventservice.compilation.mapper.CompilationMapper;
 import ru.practicum.eventservice.compilation.model.Compilation;
 import ru.practicum.eventservice.compilation.repository.CompilationRepository;
@@ -18,6 +10,15 @@ import ru.practicum.interaction.dto.event.compilation.CompilationDtoRequest;
 import ru.practicum.interaction.dto.event.compilation.CompilationDtoResponse;
 import ru.practicum.interaction.dto.event.compilation.CompilationDtoUpdate;
 import ru.practicum.interaction.exception.NotFoundException;
+import jakarta.validation.ValidationException;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Slf4j
 @Service
@@ -52,7 +53,7 @@ public class CompilationServiceAdminImpl implements CompilationServiceAdmin {
         List<Event> events = eventRepository.findAllByIdIn(compilationDtoUpdate.getEvents());
 
         CompilationDtoResponse compilationDto = compilationMapper.toCompilationDto(compilationRepository
-                .save(compilationMapper.toUpdateCompilation(compilation, compilationDtoUpdate, events)));
+                .save(compilationMapper.toUpdatedCompilation(compilation, compilationDtoUpdate, events)));
 
         log.info("Обновлена подборка с id {} на {}", compId, compilationDto);
         return compilationDto;
