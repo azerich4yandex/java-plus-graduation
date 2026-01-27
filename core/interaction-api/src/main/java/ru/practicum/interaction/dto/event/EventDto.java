@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 /**
  * DTO representing an event.
- * <p></p>
+ *<hr />
  * Fields:
  * - `id` – Unique identifier of the event.
  * - `eventDate` – Date and time when the event occurs.
@@ -15,8 +15,6 @@ public interface EventDto {
     Long getId();
 
     LocalDateTime getEventDate();
-
-    void setViews(Long views);
 
     void setConfirmedRequests(Long confirmedRequests);
 }

@@ -1,10 +1,11 @@
 package ru.practicum.requestservice.service;
 
-import java.util.List;
-import java.util.Map;
 import ru.practicum.interaction.dto.request.RequestDto;
 import ru.practicum.interaction.dto.request.RequestUpdateDto;
 import ru.practicum.interaction.dto.request.RequestUpdateResultDto;
+
+import java.util.List;
+import java.util.Map;
 
 public interface RequestService {
 
@@ -21,4 +22,6 @@ public interface RequestService {
     Map<Long, Long> getConfirmedRequests(List<Long> eventIds);
 
     Long countAllByEventIdAndStatus(Long eventId, String requestStatus);
+
+    boolean isRequestExist(Long userId, Long eventId);
 }

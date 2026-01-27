@@ -1,0 +1,21 @@
+package ru.practicum.config;
+
+import java.util.EnumMap;
+import java.util.Properties;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.FieldDefaults;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Getter
+@Setter
+@Component
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@ConfigurationProperties("analyzer.kafka")
+public class KafkaConfig {
+    EnumMap<KafkaTopic, String> topics = new EnumMap<>(KafkaTopic.class);
+    Properties actionConsumerProps;
+    Properties similarityConsumerProps;
+}
